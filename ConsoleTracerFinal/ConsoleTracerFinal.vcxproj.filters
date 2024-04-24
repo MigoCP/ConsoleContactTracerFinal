@@ -18,12 +18,18 @@
     <ClCompile Include="ConsoleTracerFinal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CustomQueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TreeNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ContactTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
