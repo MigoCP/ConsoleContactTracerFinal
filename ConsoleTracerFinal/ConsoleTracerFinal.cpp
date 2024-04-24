@@ -2,11 +2,45 @@
 #include <list>
 #include <queue>
 #include "ContactTree.h"
+#include "CustomQueue.h"
 
 using namespace std;
 
 int main() {
-    cout << "\n*********************** Strimg Tree Creation ***********************\n\n";
+
+    std::cout << "Welcome To Our Singly Linked List Queue Implementation!\n";
+
+    MyQueue* myList = new MyQueue();
+    cout << "Size of the List " << myList->GetSize() << endl;
+
+    cout << "Return if List is empty or not: " << myList->IsEmpty() << endl;
+
+    myList->Display();
+    cout << endl;
+
+    myList->Enqueue(3);
+    myList->Enqueue(2);
+    myList->Enqueue(8);
+
+    myList->Display();
+    cout << endl;
+
+    myList->Dequeue();
+    myList->Display();
+    cout << endl;
+
+    myList->Enqueue(7);
+
+    myList->Display();
+    cout << endl;
+
+    myList->Dequeue();
+    myList->Display();
+    cout << endl;
+
+    /////////////////////////////////////////////////////////////////////////////
+
+    cout << "\n*********************** String Tree Creation ***********************\n\n";
     // Create a new ContactTree with a root node
     ContactTree<string> stringTree("000");
 

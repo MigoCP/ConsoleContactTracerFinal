@@ -128,7 +128,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleTracerFinal.cpp" />
-    <ClCompile Include="CustomQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ContactTree.h" />
