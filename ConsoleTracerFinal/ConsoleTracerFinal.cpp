@@ -6,39 +6,75 @@
 using namespace std;
 
 int main() {
-    cout << "\n*********************** Tree Creation ***********************\n\n";
+    cout << "\n*********************** Strimg Tree Creation ***********************\n\n";
     // Create a new ContactTree with a root node
-    ContactTree<string> tree("000");
+    ContactTree<string> stringTree("000");
 
     // Add some contacts; assume "Patient0" has directly infected "Patient1" and "Patient2"
     cout << "\n*********************** Tree Population ***********************\n";
-    tree.AddContact("000", "001");
-    tree.AddContact("000", "002");
+    stringTree.AddContact("000", "001");
+    stringTree.AddContact("000", "002");
 
     // Add more contacts, "Patient1" infects "Patient3" and "Patient4"
-    tree.AddContact("001", "003");
-    tree.AddContact("001", "004");
+    stringTree.AddContact("001", "003");
+    stringTree.AddContact("001", "004");
 
     // Display specific contact details
     cout << "\n*********************** Contact Displaying ***********************\n";
-    tree.DisplayContact("001");
+    stringTree.DisplayContact("001");
 
     // Trace the source of infection for "Patient3"
     cout << "\n*********************** Source Tracing ***********************\n";
-    tree.TraceSource("003");
+    stringTree.TraceSource("003");
 
     // Print all contact cases from "Patient1"
     cout << "\n*********************** All Contact Cases from Patient 001 ***********************\n";
-    tree.PrintContactCases("001");
+    stringTree.PrintContactCases("001");
 
     // Print the entire contact tree
     cout << "\n*********************** Printing Entire Contact Tree ***********************\n";
     cout << "\nPrinting the entire Contact Tree:" << endl;
-    tree.PrintContactTree();
+    stringTree.PrintContactTree();
 
     // Print hierarchical tree
     cout << "\n*********************** Printing Hierarchical Tree ***********************\n";
-    tree.PrintHierarchicalTree();
+    stringTree.PrintHierarchicalTree();
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    cout << "\n*********************** Float Tree Creation ***********************\n\n";
+    // Create a new ContactTree with a root node
+    ContactTree<float> floatTree(0.0f);
+
+    // Add some contacts; assume "Patient0" has directly infected "Patient1" and "Patient2"
+    cout << "\n*********************** Tree Population ***********************\n";
+    floatTree.AddContact(0.0f, 1.0f);
+    floatTree.AddContact(0.0f, 2.0f);
+
+    // Add more contacts, "Patient1" infects "Patient3" and "Patient4"
+    floatTree.AddContact(1.0f, 3.0f);
+    floatTree.AddContact(1.0f, 4.0f);
+
+    // Display specific contact details
+    cout << "\n*********************** Contact Displaying ***********************\n";
+    floatTree.DisplayContact(0.0f);
+
+    // Trace the source of infection for "Patient3"
+    cout << "\n*********************** Source Tracing ***********************\n";
+    floatTree.TraceSource(3.0f);
+
+    // Print all contact cases from "Patient1"
+    cout << "\n*********************** All Contact Cases from Patient 001 ***********************\n";
+    floatTree.PrintContactCases(1.0f);
+
+    // Print the entire contact tree
+    cout << "\n*********************** Printing Entire Contact Tree ***********************\n";
+    cout << "\nPrinting the entire Contact Tree:" << endl;
+    floatTree.PrintContactTree();
+
+    // Print hierarchical tree
+    cout << "\n*********************** Printing Hierarchical Tree ***********************\n";
+    floatTree.PrintHierarchicalTree();
 
     return 0;
 }

@@ -124,7 +124,7 @@ public:
         T parent;
         if (!displayer || !displayer->parent)
         {
-            parent = "Unknown (Potentially patient 0)";
+            parent = displayer->data;
         }
         else parent = displayer->parent->data;
 
